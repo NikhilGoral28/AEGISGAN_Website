@@ -6,7 +6,7 @@ export default function Footer() {
       
       <div className="flex flex-wrap justify-between gap-12 lg:gap-8 mb-16 max-w-7xl mx-auto">
         {/* BRAND */}
-        <div className="w-full md:w-[22%] min-w-[200px]">
+        <div className="w-full md:w-[30%] min-w-[200px]">
           <h2 className="font-black text-2xl text-white tracking-wide mb-4">
             Aegis<span className="text-accentCyan">GAN</span>
           </h2>
@@ -17,7 +17,7 @@ export default function Footer() {
         </div>
 
         {/* TECHNOLOGY */}
-        <div className="w-full md:w-[22%] min-w-[200px]">
+        <div className="w-full md:w-[30%] min-w-[200px]">
           <h3 className="text-white font-semibold text-lg mb-4">Technology</h3>
           <ul className="space-y-3">
             <li className="text-sm hover:text-accentCyan cursor-pointer transition-colors">GAN Engine</li>
@@ -27,24 +27,30 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* COMPANY */}
-        <div className="w-full md:w-[22%] min-w-[200px]">
-          <h3 className="text-white font-semibold text-lg mb-4">Company</h3>
-          <ul className="space-y-3">
-            <li className="text-sm hover:text-accentOrange cursor-pointer transition-colors">About AegisGAN</li>
-            <li className="text-sm hover:text-accentOrange cursor-pointer transition-colors">Privacy Policy</li>
-            <li className="text-sm hover:text-accentOrange cursor-pointer transition-colors">Security Research</li>
-            <li className="text-sm hover:text-accentOrange cursor-pointer transition-colors">Contact</li>
-          </ul>
-        </div>
-
         {/* FOLLOW US */}
-        <div className="w-full md:w-[22%] min-w-[200px]">
+        <div className="w-full md:w-[30%] min-w-[200px]">
           <h3 className="text-white font-semibold text-lg mb-4">Follow Us</h3>
           <ul className="space-y-3">
-            <li className="text-sm hover:text-accentCyan cursor-pointer transition-colors">LinkedIn</li>
-            <li className="text-sm hover:text-accentCyan cursor-pointer transition-colors">GitHub</li>
-            <li className="text-sm hover:text-accentCyan cursor-pointer transition-colors">ResearchGate</li>
+            <li className="text-sm">
+              <a
+                href="https://linkedin.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-accentCyan transition-colors"
+              >
+                LinkedIn
+              </a>
+            </li>
+            <li className="text-sm">
+              <a
+                href="https://github.com/NikhilGoral28/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-accentCyan transition-colors"
+              >
+                GitHub
+              </a>
+            </li>
           </ul>
         </div>
       </div>
@@ -59,3 +65,4 @@ export default function Footer() {
     </footer>
   );
 }
+

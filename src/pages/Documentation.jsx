@@ -21,10 +21,28 @@ export default function Documentation() {
   };
 
   return (
-    <div className="min-h-screen bg-[#020617] text-slate-300 font-sans flex">
+    <div className="min-h-screen bg-[#020617] text-slate-300 font-sans flex flex-col lg:flex-row">
 
-      {/* LEFT SIDEBAR - Quick Nav */}
-      <aside className="w-72 hidden lg:flex flex-col border-r border-white/10 bg-[#0f172a]/50 p-8 h-screen sticky top-0 overflow-y-auto pt-24 backdrop-blur-xl">
+      {/* MOBILE QUICK NAV - Sticky */}
+      <div className="lg:hidden sticky top-[65px] bg-[#020617]/95 backdrop-blur-md z-40 border-b border-white/10 px-4 sm:px-6 py-3 flex gap-2 overflow-x-auto hide-scrollbar shrink-0">
+        {navItems.map(item => (
+          <button
+            key={item.id}
+            onClick={() => scrollToSection(item.id)}
+            className={`whitespace-nowrap flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${
+              activeSection === item.id
+                ? 'bg-accentCyan/10 text-accentCyan border border-accentCyan/20'
+                : 'bg-white/5 text-slate-400 border border-transparent'
+            }`}
+          >
+            <item.icon className="w-3.5 h-3.5" />
+            {item.label}
+          </button>
+        ))}
+      </div>
+
+      {/* LEFT SIDEBAR - Quick Nav (Desktop only) */}
+      <aside className="w-72 hidden lg:flex flex-col border-r border-white/10 bg-[#0f172a]/50 p-8 h-screen sticky top-0 overflow-y-auto pt-24 backdrop-blur-xl shrink-0">
         <h2 className="text-xl font-bold text-white mb-8 tracking-tight">Doc Center</h2>
         <nav className="space-y-2">
           {navItems.map(item => (
@@ -50,9 +68,10 @@ export default function Documentation() {
       </aside>
 
       {/* RIGHT CONTENT - Documentation */}
-      <main className="flex-1 max-w-5xl mx-auto px-6 lg:px-16 py-24 pb-32">
-        <header className="mb-16">
-          <h1 className="text-5xl font-black text-white tracking-tight mb-4">AegisGAN Developer Guide</h1>
+      <main className="flex-1 max-w-5xl mx-auto px-4 sm:px-8 lg:px-16 py-12 lg:py-24 pb-32 w-full min-w-0">
+        <header className="mb-12 md:mb-16">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight mb-4">AegisGAN Developer Guide</h1>
+
           <p className="text-xl text-slate-400">Deep integration manuals, system architectures, and deployment contracts for the Enterprise NIDS.</p>
         </header>
 

@@ -5,7 +5,7 @@ import award3 from "../assets/award3.png";
 
 export default function Awards() {
   const awards = [
-    { img: award1, title: "Best AI Security Innovation – 2024" },
+    { img: award1, title: "Best AI Security Innovation" },
     { img: award2, title: "Top Zero-Day Detection System" },
     { img: award3, title: "Excellence in Threat Intelligence" },
   ];
