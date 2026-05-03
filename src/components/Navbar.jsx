@@ -18,7 +18,7 @@ export default function Navbar() {
 
         {/* DOWNLOAD PACKAGE */}
         <a
-          href="https://drive.google.com/file/d/18LsxEBIxUvWqmt2YwZSNjglHoj68dfVV/view?usp=drive_link"
+          href="https://drive.google.com/file/d/10TFkJKwHjRRT_wBd0fH0fY9WjdIWvl3O/view?usp=drive_link"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center gap-2 px-3 py-1.5 bg-accentCyan/10 border border-accentCyan/30 text-accentCyan rounded-lg text-sm font-semibold hover:bg-accentCyan/20 transition-all"
@@ -38,4 +38,4 @@ export default function Navbar() {
     </nav>
   );
 }
-
+
